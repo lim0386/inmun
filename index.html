@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="p5.js"></script>
+  <script src="p5.dom.min.js"></script>
+  <!-- <script src="p5.sound.min.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <title>Hello World</title>
+</head>
+
+<script>
+  let img;
+
+  var info = [];
+  var info52, info72, info92, info142, info212, info282, info292, info302, info312;
+  let arrow01;
+  let arrow02;
+  let ex;
+  let banner;
+
+  var infos = 0;
+
+  function preload() {
+    img = loadImage('img/result2.png');
+    arrow01 = loadImage('img/arrow.png');
+    arrow02 = loadImage('img/arrow2.png');
+    ex = loadImage('img/ex.png');
+
+    for (var i = 1; i < 40; i++) {
+      info[i] = loadImage("img/" + i + ".jpg");
+    }
+    banner = loadImage("img/banner.png");
+    info52 = loadImage("img/5-2.jpg");
+    info72 = loadImage("img/7-2.jpg");
+    info92 = loadImage("img/9-2.jpg");
+    info142 = loadImage("img/14-2.jpg");
+    info212 = loadImage("img/21-2.jpg");
+    info282 = loadImage("img/28-2.jpg");
+    info292 = loadImage("img/29-2.jpg");
+    info302 = loadImage("img/30-2.jpg");
+    info312 = loadImage("img/31-2.jpg");
+  }
+
+  function setup() {
+    createCanvas(1080, 1920);
+  }
+
+  function draw() {
+    print(infos);
+    if (infos === 0) {
+
+      tint(255, 255);
+      imageMode(CENTER);
+      image(img, width/2, height/2);
+      // image(banner, width-200, (height/2)+370);
+
+      if (mouseIsPressed) {
+        //Seoul
+        if (dist(mouseX, mouseY, 358, 289) < 16) {
+          print("1");
+          infos = 1;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 329, 297) < 16) {
+          print("2");
+          infos = 2;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 376, 311) < 16) {
+          print("3");
+          infos = 3;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 324, 345) < 16) {
+          print("4");
+          infos = 4;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 310, 321) < 16) {
+          print("5");
+          infos = 5;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+        }
+        if (dist(mouseX, mouseY, 346, 320) < 16) {
+          print("6");
+          infos = 6;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 352, 346) < 16) {
+          print("7");
+          infos = 7;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+
+        //Kyoenggi
+        if (dist(mouseX, mouseY, 335, 234) < 16) {
+          print("8");
+          infos = 8;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 300, 279) < 16) {
+          print("9");
+          infos = 9;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 380, 226) < 16) {
+          print("10");
+          infos = 10;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+
+        //Incheon
+        if (dist(mouseX, mouseY, 271, 325) < 16) {
+          print("11");
+          infos = 11;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+
+        //Gangwon
+        if (dist(mouseX, mouseY, 764, 219) < 16) {
+          print("12");
+          infos = 12;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 553, 201) < 16) {
+          print("13");
+          infos = 13;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+
+        //Busan
+        if (dist(mouseX, mouseY, 827, 1117) < 16) {
+          print("14");
+          infos = 14;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 755, 1119) < 16) {
+          print("15");
+          infos = 15;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 800, 1088) < 16) {
+          print("16");
+          infos = 16;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 803, 1132) < 16) {
+          print("17");
+          infos = 17;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+
+        //Daegu
+        if (dist(mouseX, mouseY, 673, 914) < 16) {
+          print("18");
+          infos = 18;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 708, 884) < 16) {
+          print("19");
+          infos = 19;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+
+        //Kyeongnam
+        if (dist(mouseX, mouseY, 688, 1082) < 16) {
+          print("20");
+          infos = 20;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 625, 1133) < 16) {
+          print("21");
+          infos = 21;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 624, 1043) < 16) {
+          print("22");
+          infos = 22;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+
+        //Kyeongbuk
+        if (dist(mouseX, mouseY, 927, 869) < 16) {
+          print("23");
+          infos = 23;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 569, 659) < 16) {
+          print("24");
+          infos = 24;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 887, 835) < 16) {
+          print("25");
+          infos = 25;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+
+        //Daejeon
+        if (dist(mouseX, mouseY, 416, 705) < 16) {
+          print("26");
+          infos = 26;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+
+        //Cheongnam
+        if (dist(mouseX, mouseY, 364, 766) < 16) {
+          print("27");
+          infos = 27;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 224, 625) < 16) {
+          print("28");
+          infos = 28;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 216, 547) < 16) {
+          print("29");
+          infos = 29;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+
+        //Cheongbuk
+        if (dist(mouseX, mouseY, 575, 539) < 16) {
+          print("30");
+          infos = 30;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 681, 510) < 16) {
+          print("31");
+          infos = 31;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+
+        //Gwangju
+        if (dist(mouseX, mouseY, 258, 1063) < 16) {
+          print("32");
+          infos = 32;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+
+        //Jeonnam
+        if (dist(mouseX, mouseY, 377, 1168) < 16) {
+          print("33");
+          infos = 33;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 453, 1217) < 16) {
+          print("34");
+          infos = 34;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 232, 1233) < 16) {
+          print("35");
+          infos = 35;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+
+        //Jeonbuk
+        if (dist(mouseX, mouseY, 291, 914) < 16) {
+          print("36");
+          infos = 36;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 258, 914) < 16) {
+          print("37");
+          infos = 37;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, 341, 884) < 16) {
+          print("38");
+          infos = 38;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+
+        //Jaeju
+        if (dist(mouseX, mouseY, 250, 1462) < 16) {
+          print("39");
+          infos = 39;
+          imageMode(CENTER);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+
+
+        // print(mouseX, mouseY);
+      }
+    }
+    if (infos >= 1 || infos < 9) {
+      if (mouseIsPressed) {
+        if (dist(mouseX, mouseY, width - 100, 200) < 200) {
+          print("1out");
+          infos = 0;
+        }
+      }
+    }
+    if (infos >= 10 || infos < 13) {
+      if (mouseIsPressed) {
+        if (dist(mouseX, mouseY, width - 100, 200) < 200) {
+          print("1out");
+          infos = 0;
+        }
+      }
+    }
+    if (infos >= 15 || infos < 20) {
+      if (mouseIsPressed) {
+        if (dist(mouseX, mouseY, width - 100, 200) < 200) {
+          print("1out");
+          infos = 0;
+        }
+      }
+    }
+    if (infos >= 22 || infos < 27) {
+      if (mouseIsPressed) {
+        if (dist(mouseX, mouseY, width - 100, 200) < 200) {
+          print("1out");
+          infos = 0;
+        }
+      }
+    }
+    if (infos >= 32 || infos < 39) {
+      if (mouseIsPressed) {
+        if (dist(mouseX, mouseY, width - 100, 200) < 200) {
+          print("1out");
+          infos = 0;
+        }
+      }
+    }
+
+    if (infos === 5) {
+      if (mouseIsPressed) {
+        if (dist(mouseX, mouseY, width - 100, height / 2) < 200) {
+          tint(255, 255);
+          image(img, width / 2, height / 2);
+          image(info52, width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+
+          ellipse(100, height / 2, 200, 200);
+          image(arrow02, 100, height / 2);
+        }
+        if (dist(mouseX, mouseY, width - 100, 200) < 200) {
+          infos = 0;
+        }
+        if (dist(mouseX, mouseY, 100, height / 2) < 200) {
+          tint(255, 255);
+          imageMode(CENTER);
+          image(img, width / 2, height / 2);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+      }
+    }
+    if (infos === 7) {
+      if (mouseIsPressed) {
+        if (dist(mouseX, mouseY, width - 100, height / 2) < 200) {
+          tint(255, 255);
+          image(img, width / 2, height / 2);
+          image(info72, width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+
+          ellipse(100, height / 2, 200, 200);
+          image(arrow02, 100, height / 2);
+        }
+        if (dist(mouseX, mouseY, width - 100, 200) < 200) {
+          infos = 0;
+        }
+        if (dist(mouseX, mouseY, 100, height / 2) < 200) {
+          tint(255, 255);
+          imageMode(CENTER);
+          image(img, width / 2, height / 2);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+      }
+    }
+    if (infos === 9) {
+      if (mouseIsPressed) {
+        if (dist(mouseX, mouseY, width - 100, height / 2) < 200) {
+          tint(255, 255);
+          image(img, width / 2, height / 2);
+          image(info92, width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+
+          ellipse(100, height / 2, 200, 200);
+          image(arrow02, 100, height / 2);
+        }
+        if (dist(mouseX, mouseY, width - 100, 200) < 200) {
+          infos = 0;
+        }
+        if (dist(mouseX, mouseY, 100, height / 2) < 200) {
+          tint(255, 255);
+          imageMode(CENTER);
+          image(img, width / 2, height / 2);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+      }
+    }
+    if (infos === 14) {
+      if (mouseIsPressed) {
+        if (dist(mouseX, mouseY, width - 100, height / 2) < 200) {
+          tint(255, 255);
+          image(img, width / 2, height / 2);
+          image(info142, width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+
+          ellipse(100, height / 2, 200, 200);
+          image(arrow02, 100, height / 2);
+        }
+        if (dist(mouseX, mouseY, width - 100, 200) < 200) {
+          infos = 0;
+        }
+        if (dist(mouseX, mouseY, 100, height / 2) < 200) {
+          tint(255, 255);
+          imageMode(CENTER);
+          image(img, width / 2, height / 2);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+      }
+    }
+    if (infos === 21) {
+      if (mouseIsPressed) {
+        if (dist(mouseX, mouseY, width - 100, height / 2) < 200) {
+          tint(255, 255);
+          image(img, width / 2, height / 2);
+          image(info212, width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+
+          ellipse(100, height / 2, 200, 200);
+          image(arrow02, 100, height / 2);
+        }
+        if (dist(mouseX, mouseY, width - 100, 200) < 200) {
+          infos = 0;
+        }
+        if (dist(mouseX, mouseY, 100, height / 2) < 200) {
+          tint(255, 255);
+          imageMode(CENTER);
+          image(img, width / 2, height / 2);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+      }
+    }
+    if (infos === 28) {
+      if (mouseIsPressed) {
+        if (dist(mouseX, mouseY, width - 100, height / 2) < 200) {
+          tint(255, 255);
+          image(img, width / 2, height / 2);
+          image(info282, width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(100, height / 2, 200, 200);
+          image(arrow02, 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+        if (dist(mouseX, mouseY, width - 100, 200) < 200) {
+          infos = 0;
+        }
+        if (dist(mouseX, mouseY, 100, height / 2) < 200) {
+          tint(255, 255);
+          imageMode(CENTER);
+          image(img, width / 2, height / 2);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+      }
+    }
+    if (infos === 29) {
+      if (mouseIsPressed) {
+        if (dist(mouseX, mouseY, width - 100, height / 2) < 200) {
+          tint(255, 255);
+          image(img, width / 2, height / 2);
+          image(info292, width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+
+          ellipse(100, height / 2, 200, 200);
+          image(arrow02, 100, height / 2);
+        }
+        if (dist(mouseX, mouseY, width - 100, 200) < 200) {
+          infos = 0;
+        }
+        if (dist(mouseX, mouseY, 100, height / 2) < 200) {
+          tint(255, 255);
+          imageMode(CENTER);
+          image(img, width / 2, height / 2);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+      }
+    }
+    if (infos === 30) {
+      if (mouseIsPressed) {
+        if (dist(mouseX, mouseY, width - 100, height / 2) < 200) {
+          tint(255, 255);
+          image(img, width / 2, height / 2);
+          image(info302, width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+
+          ellipse(100, height / 2, 200, 200);
+          image(arrow02, 100, height / 2);
+        }
+        if (dist(mouseX, mouseY, width - 100, 200) < 200) {
+          infos = 0;
+        }
+        if (dist(mouseX, mouseY, 100, height / 2) < 200) {
+          tint(255, 255);
+          imageMode(CENTER);
+          image(img, width / 2, height / 2);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+      }
+    }
+    if (infos === 31) {
+      if (mouseIsPressed) {
+        if (dist(mouseX, mouseY, width - 100, height / 2) < 200) {
+          tint(255, 255);
+          image(img, width / 2, height / 2);
+          image(info312, width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+
+          ellipse(100, height / 2, 200, 200);
+          image(arrow02, 100, height / 2);
+        }
+        if (dist(mouseX, mouseY, width - 100, 200) < 200) {
+          infos = 0;
+        }
+        if (dist(mouseX, mouseY, 100, height / 2) < 200) {
+          tint(255, 255);
+          imageMode(CENTER);
+          image(img, width / 2, height / 2);
+          image(info[infos], width / 2, height / 2);
+
+          tint(255, 100);
+          noStroke();
+          fill(148, 138, 133, 100);
+          ellipse(width - 100, height / 2, 200, 200);
+          image(arrow01, width - 100, height / 2);
+
+          ellipse(width - 100, 200, 200, 200);
+          image(ex, width - 100, 200);
+        }
+      }
+    }
+
+  }
+</script>
+
+
+</body>
+
+</html>
