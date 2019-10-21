@@ -5,9 +5,9 @@
   <script src="p5.js"></script>
   <script src="p5.dom.min.js"></script>
   <!-- <script src="p5.sound.min.js"></script> -->
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
   <meta charset="utf-8">
-  <title>Hello World</title>
+  <title>인문주간</title>
 </head>
 
 <script>
@@ -23,7 +23,7 @@
   var infos = 0;
 
   function preload() {
-    img = loadImage('img/result2.png');
+    img = loadImage('img/result3.png');
     arrow01 = loadImage('img/arrow.png');
     arrow02 = loadImage('img/arrow2.png');
     ex = loadImage('img/ex.png');
@@ -42,19 +42,34 @@
     info302 = loadImage("img/30-2.jpg");
     info312 = loadImage("img/31-2.jpg");
   }
+  var cText = 0;
 
   function setup() {
-    createCanvas(1080, 1920);
+    // createCanvas(1080, 1920);
+    createCanvas(1070, 1899);
+    // background(0);
   }
 
   function draw() {
-    print(infos);
+    // print(infos);
     if (infos === 0) {
 
       tint(255, 255);
       imageMode(CENTER);
-      image(img, width/2, height/2);
+      image(img, 1080 / 2, 1920 / 2);
+      // ellipse(width, height, 10, 10);
       // image(banner, width-200, (height/2)+370);
+      textSize(30);
+      textAlign(CENTER);
+      textStyle(BOLD);
+      cText = cText + 8;
+      print(cText);
+      fill(150, cText);
+      if (cText > 255) {
+        cText = 0;
+      }
+
+      text("해당 지역을 클릭하시면 기관별 행사 세부내용을 확인하실 수 있습니다", 1080 / 2, 1920 / 2 - 350);
 
       if (mouseIsPressed) {
         //Seoul
